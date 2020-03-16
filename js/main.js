@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
     $(document).on("click", ".quadrato" , function() {
+        $('.quadrato').removeClass('active');
+        $(this).addClass('active');
         $.ajax({
             url: 'https://flynn.boolean.careers/exercises/api/random/int',
             method: 'GET',
@@ -8,9 +10,9 @@ $(document).ready(function(){
                 var numeroPC = data.response;
                 console.log(numeroPC);
                 if (numeroPC > 5) {
-                    $(this).addClass('verde');
+                    $('.quadrato.active').addClass('verde');
                 } else {
-                    $(this).addClass('giallo');
+                    $('.quadrato.active').addClass('giallo');
                 }
             },
             error: function(){
