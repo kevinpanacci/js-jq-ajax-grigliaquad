@@ -16,10 +16,10 @@ $(document).ready(function(){
                 console.log(numeroPC);
                 if (numeroPC > 5) {
                     $('.quadrato.active').addClass('verde');
-                    $('.quadrato.active p').append(numeroPC);
+                    $('.quadrato.active p').text(numeroPC);
                 } else {
                     $('.quadrato.active').addClass('giallo');
-                    $('.quadrato.active p').append(numeroPC);
+                    $('.quadrato.active p').text(numeroPC);
                 }
             },
             error: function(){
