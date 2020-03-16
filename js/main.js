@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+    var source = $('#template-quadrati').html();
+    var template = Handlebars.compile(source);
+    var templateQuadrati = template(templateQuadrati);
+    $('.container').append(templateQuadrati);
+
     $(document).on("click", ".quadrato" , function() {
         $('.quadrato').removeClass('active');
         $(this).addClass('active');
